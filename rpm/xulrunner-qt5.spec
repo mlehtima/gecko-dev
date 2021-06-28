@@ -72,6 +72,8 @@ Patch25:    0025-Revert-Bug-1427455-Remove-unused-variables-from-base.patch
 Patch26:    0026-Revert-Bug-1333826-Remove-SDK_FILES-SDK_LIBRARY-and-.patch
 Patch27:    0027-Revert-Bug-1333826-Remove-the-make-sdk-build-target-.patch
 Patch28:    0028-Revert-Bug-1333826-Remove-a-few-references-from-.mk-.patch
+Patch29:    0029-sailfishos-configure-Rust-configure-logging.-JB-5301.patch
+Patch30:    0030-sailfishos-configure-Read-rustc-host-from-environmen.patch
 #Patch9:     0009-sailfishos-gecko-Create-EmbedLiteCompositorBridgePar.patch
 #Patch10:    0010-sailfishos-gecko-Remove-PuppetWidget-from-TabChild-i.patch
 #Patch11:    0011-sailfishos-gecko-Make-TabChild-to-work-with-TabChild.patch
@@ -245,7 +247,9 @@ export RUST_HOST_TARGET=armv7-unknown-linux-gnueabihf
 export RUST_TARGET=armv7-unknown-linux-gnueabihf
 export TARGET=armv7-unknown-linux-gnueabihf
 export HOST=armv7-unknown-linux-gnueabihf
+# This should be define...
 export CROSS_COMPILE=armv7-unknown-linux-gnueabihf
+export CXXFLAGS="$CXXFLAGS -DCROSS_COMPILE=armv7-unknown-linux-gnueabihf"
 echo "ac_add_options --host=armv7-unknown-linux-gnueabihf" >> "$MOZCONFIG"
 %endif
 %ifarch aarch64
