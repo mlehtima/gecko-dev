@@ -241,6 +241,12 @@ source "%BUILD_DIR"/rpm-shared.env
 # for native x86 builds
 %ifarch %arm
 export SB2_RUST_TARGET_TRIPLE=armv7-unknown-linux-gnueabihf
+export RUST_HOST_TARGET=armv7-unknown-linux-gnueabihf
+export RUST_TARGET=armv7-unknown-linux-gnueabihf
+export TARGET=armv7-unknown-linux-gnueabihf
+export HOST=armv7-unknown-linux-gnueabihf
+export CROSS_COMPILE=armv7-unknown-linux-gnueabihf
+echo "ac_add_options --host=armv7-unknown-linux-gnueabihf" >> "$MOZCONFIG"
 %endif
 %ifarch aarch64
 export SB2_RUST_TARGET_TRIPLE=aarch64-unknown-linux-gnu
