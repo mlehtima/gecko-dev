@@ -198,6 +198,7 @@ BuildRequires:  autoconf213
 BuildRequires:  automake
 BuildRequires:  python3-base
 BuildRequires:  python3-sqlite
+BuildRequires:  python3-zstandard
 BuildRequires:  python3-devel
 BuildRequires:  zip
 BuildRequires:  unzip
