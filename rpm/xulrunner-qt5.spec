@@ -163,6 +163,7 @@ Source0:    %{name}-%{version}.tar.bz2
 #Patch60 - Patch62 are not needed as issue was fixed in mozilla62 (https://bugzilla.mozilla.org/show_bug.cgi?id=1467722)
 #Patch64:    sha1: 2a51338a5a287eb0e505edb6ec59912ad7eccb33
 #Patch64:    Is not needed as the issue was fixed in mozilla72 (https://bugzilla.mozilla.org/show_bug.cgi?id=1586144)
+Patch0:     x86_build_fix.patch
 
 BuildRequires:  rust
 BuildRequires:  rust-std-static
